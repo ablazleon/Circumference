@@ -17,8 +17,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        funcView.R = 50.0
+        radiusSlider.sendActions(for: .valueChanged)
+        
     }
 
+    @IBAction func radiusUpdate(_ sender: UISlider) {
+        funcView.R = Double(150.0*sender.value)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -18,7 +18,7 @@ class FunctionView: UIView {
     var lw : Double = 5
     
     @IBInspectable
-    var scale : Double = 4
+    var R : Double = 80
     
     // It is created an object dataSource
     
@@ -27,6 +27,8 @@ class FunctionView: UIView {
     // Are declared so to be call after the initializers
     lazy var xmax = bounds.size.width
     lazy var ymax = bounds.size.height
+    
+    
     // Despite the inmutable nature of the sizes (more people argued about this problem in StackOverflow)
     
     override func draw(_ rect: CGRect) {
@@ -78,7 +80,7 @@ class FunctionView: UIView {
         
         let path = UIBezierPath()
         
-        var R = 20.0
+        //var R = 20.0
         //Initial position
         var x = R + Double(xmax/2)
         var y = Double(ymax/2)
