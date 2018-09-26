@@ -18,7 +18,11 @@ class FunctionView: UIView {
     var lw : Double = 5
     
     @IBInspectable
-    var R : Double = 80
+    var R : Double = 80 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     
     // It is created an object dataSource
     
@@ -28,6 +32,7 @@ class FunctionView: UIView {
     lazy var xmax = bounds.size.width
     lazy var ymax = bounds.size.height
     
+   
     
     // Despite the inmutable nature of the sizes (more people argued about this problem in StackOverflow)
     

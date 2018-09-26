@@ -14,6 +14,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var radiusSlider: UISlider!
     
+     // It is done a did set: to update it
+    
+    var radius: Double = 0.0{
+        didSet {
+            funcView.setNeedsDisplay()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
